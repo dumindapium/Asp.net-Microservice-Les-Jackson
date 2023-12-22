@@ -13,6 +13,8 @@ builder.Services.AddDbContext<AppDBContext>(options => options.UseInMemoryDataba
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddScoped<IPlatformRepo,PlatformRepo>();
 
 var app = builder.Build();
