@@ -9,12 +9,12 @@ namespace PlatformService.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class PlatformController : ControllerBase
+public class PlatformsController : ControllerBase
 {
     private readonly IPlatformRepo platformRepo;
     private readonly IMapper mapper;
 
-    public PlatformController(IPlatformRepo platformRepo, IMapper mapper)
+    public PlatformsController(IPlatformRepo platformRepo, IMapper mapper)
     {
         this.platformRepo = platformRepo;
         this.mapper = mapper;
